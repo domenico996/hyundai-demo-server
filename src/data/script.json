@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "question": "What makes Hyundai better than Toyota or Honda?",
+    "answer": "Hyundai stands out with Americas Best Warranty - 10 years or 100,000 miles on the powertrain, which no competitor matches. You also get 3 years of complimentary maintenance included.",
+    "approved": true
+  },
+  {
+    "id": 2,
+    "question": "Do you have electric vehicles?",
+    "answer": "Absolutely - Hyundai has one of the strongest EV lineups out there. The Ioniq 5 starts at $43,450 with up to 303 miles of range. The Ioniq 6 sedan gets up to 361 miles, best in its class.",
+    "approved": true
+  },
+  {
+    "id": 3,
+    "question": "What is the warranty?",
+    "answer": "Hyundai offers Americas Best Warranty: 5 years/60k miles basic, 10 years/100k miles powertrain, and 3 years/36k miles of complimentary maintenance included.",
+    "approved": true
+  },
+  {
+    "id": 4,
+    "question": "Whats the most popular SUV?",
+    "answer": "The Tucson is consistently one of Hyundais best sellers - a compact SUV starting at $29,150, available as hybrid or plug-in hybrid. Need 3 rows? The Palisade starts at $37,350 and seats 8.",
+    "approved": true
+  }
+]
