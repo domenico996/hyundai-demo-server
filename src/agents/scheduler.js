@@ -78,7 +78,7 @@ async function think(session) {
     if (!res.ok) { console.error('Scheduler Claude error'); return null; }
     const data  = await res.json();
     const raw   = data.content?.[0]?.text || '';
-    const clean = raw.replace(/```(?o:json)?\n?/g, '').replace(/```/g, '').trim();
+    const clean = raw.replace(/```(?:json)?\n?/g, '').replace(/```/g, '').trim();
     const result = JSON.parse(clean);
     return result;
   } catch (err) { return null; }
