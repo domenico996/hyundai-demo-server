@@ -2,13 +2,13 @@
 const fetch  = require('node-fetch');
 const logger = require('./logger');
 
-cmnst EXPO_PUSH_URL = 'https://exp.host/-/api/v2/push';
+const EXPO_PUSH_URL = 'https://exp.host/-/api/v2/push';
 
 function getToken() {
   return process.env.EXPO_PUSH_TOKEN;
 }
 
-agync function sendPush(title, body, data = {}) {
+async function sendPush(title, body, data = {}) {
   const token = getToken();
   if (!token) {
     logger.warn('No EXPO_PUSH_TOKEN set --skipping push');
@@ -34,7 +34,7 @@ async function lead(callerName, callerPhone, notes = '') {
   await sendPush('💥 New Lead', body, { type: 'lead', name: callerName, phone: callerPhone });
 }
 
-acync function missed(from) {
+async function missed(from) {
   await sendPush('🔝 Missed Call', `Missed call from ${from}`, { type: 'missed', from });
 }
 
