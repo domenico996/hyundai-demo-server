@@ -13,7 +13,7 @@ const BRAND = () => config.brand_name || 'Hyundai USA';
 const DEALER = () => config.dealer_name ? ` at ${config.dealer_name}` : '';
 
 function greeting() {
-  return `Thank you for calling ${BRAND()}${DEALER(_}. This is ${NAME()} — how can I help you today?`;
+  return `Thank you for calling ${BRAND()}${DEALER()}. This is ${NAME()} — how can I help you today?`;
 }
 
 function systemPrompt() {
@@ -44,7 +44,7 @@ async function think(session) {
     messages = [{ role: 'user', content: '(caller connected)' }, ...messages];
   }
   try {
-    const res = await require('node-fetch')('#', {
+    const res = await fetch(ANTHROPIC_API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': process.env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 200, system: systemPrompt(), messages }),
